@@ -16,6 +16,9 @@ app.post('/translate', async (req, res) => {
     res.status(500).json({ error: error.message });
   }
 });
+app.get('/', (req, res) => {
+    res.send('Translation Proxy Server is Running');
+});
 
 const PORT = 3000;
 app.listen(PORT, () => {
